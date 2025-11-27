@@ -10,7 +10,7 @@ import Cart from './Pages/Cart';
 import ProductDetailsPage from './Pages/ProductDetailsPage';
 import CheckOut from './Pages/CheckOut';
 import WishlistPage from './Pages/WishlistPage';
-import Footer from './Components/Footer';
+import Footer from './components/Footer';
 import AccountPage from './Pages/AccountPage';
 
 const App = () => {
