@@ -7,7 +7,7 @@ import {
   Copyright,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import QrCode from '../assets/Qr Code.png';
+import QrCode from '../assets/QrCode.png';
 import GooglePlay from '../assets/GooglePlay.png';
 import AppStore from '../assets/AppStore.png';
 

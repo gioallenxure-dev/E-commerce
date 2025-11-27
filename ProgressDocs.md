@@ -1,18 +1,12 @@
-# 🗓️ E-commerce Replica Progress: November 27, 2025
+# Date: November 27, 2025
 
-## ✅ Core Setup & Dependencies
+==**Progress of the day**==
 
-* **Project Initialization:** Set up all routes on `App.jsx`.
-* **Dependencies:** Installed [**TailwindCSS**], [**react-router-dom**], and [**lucide-react**].
+✔️ Created all pages.
+✔️ Set up all routes on App.jsx.
+✔️ Installed dependencies [TailwindCSS, react-router-dom, lucide-react].
+✔️ Added AnnouncementBar | Responsive (Need Improvenment).
+✔️ Added Header and navigation | Responsive (Fairly Good) | Routes connected to corresponding pages.
+✔️ Added Footer | Responsive (Need Improvement on Mobile View) | Account Links working.
 
-## 🖼️ Completed UI Components
-
-* **Announcement Bar:** Added component.
-    * *Status:* Responsive, but **Needs Improvement**.
-* **Header & Navigation:** Added component and connected routes.
-    * *Status:* **Fairly Good** responsiveness.
-* **Footer:** Added component.
-    * *Status:* **Needs Improvement** on Mobile View.
-* **Account Links:** Functionality confirmed to be working.
-
----
+=========================
