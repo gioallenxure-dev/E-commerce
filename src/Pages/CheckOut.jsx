@@ -1,7 +1,7 @@
-import React from 'react';
+import Breadcrumb from '../components/Breadcrumb';
 
 const CheckOut = () => {
-  return <div>CheckOut</div>;
+  return <section>checkout page</section>;
 };
 
 export default CheckOut;

@@ -1,7 +1,42 @@
-import React from 'react';
+import AuthImg from '../assets/AuthImg.png';
+import Inputs from '../components/Inputs';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
-  return <div>Login</div>;
+  return (
+    <section className='flex flex-col mt-20 mb-60 md:flex-row '>
+      <div className='hidden md:flex  md:w-[50%] bg-[#CBE4E8]  h-[800px] overflow-hidden'>
+        <img src={AuthImg} alt='Phone with Cart' className='object-contain' />
+      </div>
+
+      <div className='flex flex-col justify-center w-full md:w-[41%] px-8 md:pl-50 gap-8'>
+        <div className='flex flex-col gap-5'>
+          <h1 className='font-inter text-4xl font-medium tracking-wide md:text-5xl'>
+            Log in to Exclusive
+          </h1>
+          <p className='text-gray-600'>Enter your details beloww</p>
+        </div>
+
+        <form className='flex flex-col gap-6 w-full'>
+          <Inputs type='text' placeholder='Email or Phone Number' />
+          <Inputs type='password' placeholder='Password' />
+
+          <div className='flex flex-row gap-4 justify-between items-center mt-4'>
+            <button
+              type='submit'
+              className='bg-primary hover:bg-red-600 transition-all px-15 py-4 text-white font-medium rounded-md '
+            >
+              Log In
+            </button>
+
+            <a href='#' className='text-primary'>
+              Forgot Password?
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+  );
 };
 
 export default Login;

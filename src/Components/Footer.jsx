@@ -91,9 +91,7 @@ const Footer = () => {
               Save $3 with App New User Only
             </p>
 
-            {/* THIS is the "Same Div" that holds QR + Buttons side-by-side */}
             <div className='flex gap-2 items-center'>
-              {/* Left Side: QR Code */}
               <div className='w-[80px] h-[80px] bg-white p-1'>
                 <img
                   src={QrCode}
@@ -102,7 +100,6 @@ const Footer = () => {
                 />
               </div>
 
-              {/* Right Side: Stacked Buttons */}
               <div className='flex flex-col gap-2'>
                 <img
                   src={GooglePlay}
@@ -118,7 +115,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Social Icons (Below the group) */}
           <div className='flex gap-6'>
             <Facebook
               size={24}
