@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import AuthImg from '../assets/AuthImg.png';
 import Google from '../assets/Google.png';
-import Inputs from '../components/Inputs';
+import Inputs from '../ui/Inputs';
 
 const SignUp = () => {
   return (
@@ -26,14 +26,14 @@ const SignUp = () => {
           <div className='flex flex-col gap-4 mt-4'>
             <button
               type='submit'
-              className='bg-primary hover:bg-red-600 transition-all py-4 text-white font-medium rounded-md w-full'
+              className='cursor-pointer bg-primary  hover:bg-[#C03939] transition-all duration-200 py-4 text-white font-medium rounded-md w-full'
             >
               Create Account
             </button>
 
             <button
               type='button'
-              className='flex items-center justify-center gap-3 py-4 border border-gray-300 rounded-md w-full hover:bg-gray-50 transition-all'
+              className=' cursor-pointer flex items-center justify-center gap-3 py-4 border border-gray-300 rounded-md w-full hover:bg-gray-50 transition-all'
             >
               <img src={Google} alt='Google logo' className='w-6 h-6' />
               <span>Sign up with Google</span>

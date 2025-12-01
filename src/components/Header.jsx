@@ -45,7 +45,6 @@ const Header = () => {
 
         {/* Mobile Toggle */}
         <div className='flex items-center gap-4'>
-          {/* Search Bar (Hidden on small mobile to save space, optional) */}
           <div className='hidden md:flex justify-between items-center bg-[#F5F5F5] rounded-md px-3 py-2'>
             <input
               type='text'
@@ -55,7 +54,6 @@ const Header = () => {
             <Search />
           </div>
 
-          {/* Icons */}
           <div className='flex gap-4 items-center'>
             <button>
               <Heart size={24} />
@@ -75,7 +73,6 @@ const Header = () => {
       {/* Mobile Menu Dropdown  */}
       {isOpen && (
         <div className='md:hidden bg-white border-t border-gray-200 px-4 py-4 absolute w-full z-50'>
-          {/* Mobile Search */}
           <div className='flex items-center bg-[#F5F5F5] rounded-md px-3 py-2 mb-4'>
             <input
               type='text'

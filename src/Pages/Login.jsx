@@ -1,6 +1,5 @@
 import AuthImg from '../assets/AuthImg.png';
-import Inputs from '../components/Inputs';
-import { Link } from 'react-router-dom';
+import Inputs from '../ui/Inputs';
 
 const Login = () => {
   return (
@@ -24,7 +23,7 @@ const Login = () => {
           <div className='flex flex-row gap-4 justify-between items-center mt-4'>
             <button
               type='submit'
-              className='bg-primary hover:bg-red-600 transition-all px-15 py-4 text-white font-medium rounded-md '
+              className='cursor-pointer bg-primary  hover:bg-[#C03939] px-15 py-4 text-white font-medium rounded-md '
             >
               Log In
             </button>

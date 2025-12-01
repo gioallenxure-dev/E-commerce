@@ -17,7 +17,7 @@ const Footer = () => {
     { id: 2, text: 'Login / Register', path: '/login' },
     { id: 3, text: 'Cart', path: '/cart' },
     { id: 4, text: 'Wishlist', path: '/wishlist' },
-    { id: 4, text: 'Shop', path: '/' },
+    { id: 5, text: 'Shop', path: '/' },
   ];
   const quickLinks = [
     { id: 1, text: 'Privacy Policy' },
