@@ -1,14 +1,57 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom'; // 1. Import Link
-import { Search, Heart, ShoppingCart, Menu, X } from 'lucide-react'; // Import Menu/X icons
+import { useState, useContext, useEffect, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import {
+  Search,
+  Heart,
+  ShoppingCart,
+  Menu,
+  X,
+  User,
+  ShoppingBag,
+  XCircle,
+  Star,
+  LogOut,
+} from 'lucide-react';
 import AnnouncementBar from './AnnouncementBar';
+import { AuthContext } from '../hooks/AuthContext';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const { isLoggedIn, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const userMenuRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
+        setIsUserMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleLogout = () => {
+    logout();
+    setIsUserMenuOpen(false);
+    navigate('/');
+  };
+
+  const userMenuItems = [
+    { icon: User, text: 'Manage My Account', path: '/my-account' },
+    { icon: ShoppingBag, text: 'My Order', path: '/cart' },
+    { icon: XCircle, text: 'My Cancellations', path: '/cart' },
+    { icon: Star, text: 'My Reviews', path: '/cart' },
+  ];
 
   const navItems = [
     { id: 1, text: 'Home', path: '/' },
@@ -55,12 +98,52 @@ const Header = () => {
           </div>
 
           <div className='flex gap-4 items-center'>
-            <button>
+            <Link to='/wishlist'>
               <Heart size={24} />
-            </button>
-            <button>
+            </Link>
+            <Link to='/cart'>
               <ShoppingCart size={24} />
-            </button>
+            </Link>
+
+            {/* User icon with dropdown - only shown when logged in */}
+            {isLoggedIn && (
+              <div className='relative' ref={userMenuRef}>
+                <button
+                  onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
+                  className={`rounded-full p-1.5 transition-colors duration-300 cursor-pointer ${
+                    isUserMenuOpen
+                      ? 'bg-primary text-white'
+                      : 'hover:bg-primary hover:text-white'
+                  }`}
+                >
+                  <User size={24} />
+                </button>
+
+                {/* Dropdown Menu */}
+                {isUserMenuOpen && (
+                  <div className='absolute right-0 mt-2 w-56 bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-600/80 backdrop-blur-md rounded-lg shadow-xl py-2 z-50'>
+                    {userMenuItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.path}
+                        onClick={() => setIsUserMenuOpen(false)}
+                        className='flex items-center gap-3 px-4 py-3 text-white hover:bg-white/20 transition-colors'
+                      >
+                        <item.icon size={20} strokeWidth={1.5} />
+                        <span className='text-sm'>{item.text}</span>
+                      </Link>
+                    ))}
+                    <button
+                      onClick={handleLogout}
+                      className='flex items-center gap-3 px-4 py-3 text-white hover:bg-white/20 transition-colors w-full cursor-pointer'
+                    >
+                      <LogOut size={20} strokeWidth={1.5} />
+                      <span className='text-sm'>Logout</span>
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Hamburger Button (Visible on Mobile Only) */}
             <button className='md:hidden' onClick={handleToggle}>

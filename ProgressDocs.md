@@ -29,7 +29,7 @@
 
   - _Notes:_ Responsive, but **Needs Improvement** on different screens.
 
-  # 🗓️ E-commerce Replica Progress: December 1, 2025
+  # 🗓️ E-commerce Replica Progress: December 01, 2025
 
 ## 🖼️ Completed UI Components
 
@@ -43,3 +43,16 @@
   - _Notes:_ Made **Button** modular to put in other pages. Also updated button on Error Page and Auth Pages to be consistent with hover effects.
 - **HomeHeroSection:** Added component.
   - _Notes:_ Responsive. The carousel is autoplay with a 3 secs delay.
+
+# 🗓️ E-commerce Replica Progress: December 02, 2025
+
+## 🖼️ Completed UI Components
+
+- **UI:** Added Folder.
+  - _Notes:_ Created folder for most common used UI all through pages.
+- **Home Page UI:** Added UI.
+  - _Notes:_ Created UI commoponents for the Home Page [**CatergoryBox**], [**CountdownTimer**], [**ProductBox**], [**SectionTitle**], and [**SliderControls**].
+  - **Home Page Sections:** Added components.
+  - _Notes:_ Created section commoponents for the Home Page [**HomeNewArrivalSection**], [**HomeBestSellerSection**], [**HeroCategorySection**], [**HeroFlashSalesSection**], [**HeroSection**], and [**HomeExploreSection**].
+- **ProductData:** Added Data.
+  - _Notes:_ Created a seperate JS file to store array informtaion of the product.

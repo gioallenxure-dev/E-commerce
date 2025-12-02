@@ -17,7 +17,6 @@ function ServiceOffer({ title, svg, description }) {
   );
 }
 
-// --- Main Services Section ---
 const ServicesSection = () => {
   return (
     <section className='wrapper flex flex-col md:flex-row gap-6 md:gap-10 mb-30 md:mb-40 justify-center'>

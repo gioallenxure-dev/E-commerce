@@ -1,6 +1,6 @@
 const Button = ({ text, className = '', ...props }) => {
   const baseClass =
-    'bg-primary cursor-pointer text-white px-8 py-3 rounded hover:bg-[#C03939] transition-all duration-200';
+    'bg-primary cursor-pointer text-white px-8 py-3 rounded hover:bg-[#C03939] transition-all duration-200 max-w-max';
 
   return (
     <button className={`${baseClass} ${className}`} {...props}>

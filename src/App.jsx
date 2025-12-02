@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './hooks/AuthContext';
+
 import Header from './components/Header';
 import HomePage from './Pages/HomePage';
 import SignUp from './Pages/SignUp';
@@ -16,31 +18,33 @@ import AccountPage from './Pages/AccountPage';
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='flex flex-col min-h-screen'>
-        <Header />
+      <AuthProvider>
+        <div className='flex flex-col min-h-screen'>
+          <Header />
 
-        <main className='flex-grow'>
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/sign-up' element={<SignUp />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/contact' element={<ContactPage />} />
-            <Route path='/about' element={<AboutPage />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/product-details' element={<ProductDetailsPage />} />
-            <Route
-              path='/product-details/:id'
-              element={<ProductDetailsPage />}
-            />
-            <Route path='/checkout' element={<CheckOut />} />
-            <Route path='/wishlist' element={<WishlistPage />} />
-            <Route path='/my-account' element={<AccountPage />} />
-            <Route path='*' element={<NotFoundPage />} />
-          </Routes>
-        </main>
+          <main className='flex-grow'>
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='/sign-up' element={<SignUp />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/contact' element={<ContactPage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/product-details' element={<ProductDetailsPage />} />
+              <Route
+                path='/product-details/:id'
+                element={<ProductDetailsPage />}
+              />
+              <Route path='/checkout' element={<CheckOut />} />
+              <Route path='/wishlist' element={<WishlistPage />} />
+              <Route path='/my-account' element={<AccountPage />} />
+              <Route path='*' element={<NotFoundPage />} />
+            </Routes>
+          </main>
 
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </AuthProvider>
     </BrowserRouter>
   );
 };

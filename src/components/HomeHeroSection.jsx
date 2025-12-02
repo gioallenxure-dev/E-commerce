@@ -35,7 +35,7 @@ const HomeHeroSection = () => {
   const imgURLs = [Banner, Banner2, Banner3, Banner4];
 
   return (
-    <section className='wrapper flex px-4 mb-40 md:px-0'>
+    <section className='wrapper flex px-4 mb-30 md:px-0'>
       <style>{customSwiperStyles}</style>
 
       <section className='hidden md:block w-1/5 border-r border-gray-400 mr-10'>

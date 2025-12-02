@@ -19,7 +19,7 @@ const ContactPage = () => {
 
       <div className='wrapper px-4 mb-60 md:px-0 '>
         <div className='flex flex-col lg:flex-row gap-15'>
-          {/* --- Left Side (Formerly col-span-2) --- */}
+          {/* Left Side*/}
           {/* Takes up roughly 30-40% width on large screens */}
           <div className='w-full lg:w-[30%] flex flex-col gap-6'>
             {/* Placeholder content for the left panel info */}
@@ -57,7 +57,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* --- Right Side (Form) --- */}
+          {/* Right Side (Form) */}
           {/* Takes up remaining space (60-65%) */}
           <div className='w-full lg:w-[75%] shadow-sm bg-white p-6 rounded-lg border border-gray-100'>
             <div className='flex flex-col gap-5 h-full justify-between'>
