@@ -4,14 +4,14 @@ import SliderControls from '../ui/SliderControls';
 import CountdownTimer from '../ui/CountdownTimer';
 import ProductBox from '../ui/ProductBox';
 import Button from '../ui/Button';
-import productsData from '../util/productsData';
+import productsData from '../util/ProductsData';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const FlashSalesSection = () => {
+const HomeFlashSalesSection = () => {
   const swiperRef = useRef(null);
 
   const handlePrev = () => {
@@ -70,4 +70,4 @@ const FlashSalesSection = () => {
   );
 };
 
-export default FlashSalesSection;
+export default HomeFlashSalesSection;

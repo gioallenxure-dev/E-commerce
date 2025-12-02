@@ -1,6 +1,6 @@
 import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
-import productsData from '../util/productsData';
+import productsData from '../util/ProductsData';
 import ProductBox from '../ui/ProductBox';
 
 const HomeBestSellerSection = () => {

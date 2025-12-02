@@ -1,6 +1,6 @@
 import SectionTitle from '../ui/SectionTitle';
 import SliderControls from '../ui/SliderControls';
-import productsData from '../util/productsData';
+import productsData from '../util/ProductsData';
 import ProductBox from '../ui/ProductBox';
 import Button from '../ui/Button';
 

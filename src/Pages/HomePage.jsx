@@ -1,4 +1,4 @@
-import FlashSalesSection from '../components/HomeFlashSalesSection';
+import HomeFlashSalesSection from '../components/HomeFlashSalesSection';
 import HeroSection from '../components/HomeHeroSection';
 import HomeCategorySection from '../components/HomeCategorySection';
 import HomeBestSellerSection from '../components/HomeBestSellerSection';
@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <main>
       <HeroSection />
-      <FlashSalesSection />
+      <HomeFlashSalesSection />
       <HomeCategorySection />
       <HomeBestSellerSection />
       <div className='wrapper w-full my-20'>
