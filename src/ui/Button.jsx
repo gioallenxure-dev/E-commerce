@@ -1,9 +1,16 @@
-const Button = ({ text, className = '', ...props }) => {
+const Button = ({ text, className = '', variant = 'solid', ...props }) => {
+  const solidClass = 'bg-primary text-white hover:bg-[#C03939]';
+
+  const outlineClass =
+    'bg-transparent border border-gray-300  hover:bg-primary hover:text-white';
+
   const baseClass =
-    'bg-primary cursor-pointer text-white px-8 py-3 rounded hover:bg-[#C03939] transition-all duration-200 max-w-max';
+    'cursor-pointer px-8 py-3 rounded transition-all duration-200 max-w-max  ';
+
+  const variantClass = variant === 'outline' ? outlineClass : solidClass;
 
   return (
-    <button className={`${baseClass} ${className}`} {...props}>
+    <button className={`${baseClass} ${variantClass} ${className}`} {...props}>
       {text}
     </button>
   );

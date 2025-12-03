@@ -14,11 +14,13 @@ import {
 } from 'lucide-react';
 import AnnouncementBar from './AnnouncementBar';
 import { AuthContext } from '../hooks/AuthContext';
+import { CartContext } from '../hooks/CartContext';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const { isLoggedIn, logout } = useContext(AuthContext);
+  const { cartCount, wishlistCount } = useContext(CartContext);
   const navigate = useNavigate();
   const userMenuRef = useRef(null);
 
@@ -98,11 +100,21 @@ const Header = () => {
           </div>
 
           <div className='flex gap-4 items-center'>
-            <Link to='/wishlist'>
+            <Link to='/wishlist' className='relative'>
               <Heart size={24} />
+              {wishlistCount > 0 && (
+                <span className='absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium'>
+                  {wishlistCount}
+                </span>
+              )}
             </Link>
-            <Link to='/cart'>
+            <Link to='/cart' className='relative'>
               <ShoppingCart size={24} />
+              {cartCount > 0 && (
+                <span className='absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium'>
+                  {cartCount}
+                </span>
+              )}
             </Link>
 
             {/* User icon with dropdown - only shown when logged in */}

@@ -56,3 +56,18 @@
   - _Notes:_ Created section commoponents for the Home Page [**HomeNewArrivalSection**], [**HomeBestSellerSection**], [**HeroCategorySection**], [**HeroFlashSalesSection**], [**HeroSection**], and [**HomeExploreSection**].
 - **ProductData:** Added Data.
   - _Notes:_ Created a seperate JS file to store array informtaion of the product.
+
+# 🗓️ E-commerce Replica Progress: December 03, 2025
+
+## ✔️ Finished Replication
+
+- **Account Page:** Added Page.
+  - _Notes:_ Responsive could do better in mobile view.
+- **Cart Page:** Added Page.
+  - _Notes:_ Responsive could do better in mobile view.
+- **Checkout Page:** Added Page.
+  - _Notes:_ Responsive could do better in mobile view.
+- **Product Detail:** Added Page.
+  - _Notes:_ Responsive. Some information were taken from ProductsData to make it dynamic.
+- **Heart and Cart:** Updated file.
+  - _Notes:_ The count for added cart and wishlist now functional using react context.

@@ -43,7 +43,7 @@ const Breadcrumb = ({ customPath }) => {
 
   return (
     <nav className='wrapper py-20 px-4 md:px-0'>
-      <ol className='flex items-center gap-2 text-sm'>
+      <ol className='flex flex-wrap items-center gap-2 text-sm'>
         <li>
           <Link
             to='/'
